@@ -39,7 +39,7 @@ before_install:
 install:
     - cd $TRAVIS_BUILD_DIR
     - python3 --version
-    #- pip install -r blender_requirements.txt
+    - pip install -r blender_requirements.txt
     - pip list
 
 script:
