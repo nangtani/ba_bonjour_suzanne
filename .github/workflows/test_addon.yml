@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-      bl-addon: ["bonjour_suzanne"]
+      #bl-addon: ["bonjour_suzanne"]
       max-parallel: 4
       matrix:
         # blender-version: ["2.78c", "2.79b", "2.80", "2.81a", "2.82a", "2.83"]
@@ -38,4 +38,4 @@ jobs:
 
     - name: Test Blender ${{ matrix.blender-version }} with pytest
       run: |
-        python scripts/test_addon.py ${{ matrix.bl-addon }} ${{ matrix.blender-version }}
+        python scripts/test_addon.py "bonjour_suzanne" ${{ matrix.blender-version }}
